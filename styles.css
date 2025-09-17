@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: #000;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.sidebar {
+    width: 15%;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.resume-btn {
+    background: #000;
+    color: white;
+    border: 2px solid #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.resume-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 20px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.tab-button:hover {
+    background: #555;
+    transform: translateX(5px);
+}
+
+.tab-button.active {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+    height: calc(100vh - 40px);
+    color: #000;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.photo-row.two-photos .photo-item {
+    flex: 0 0 calc(50% - 15px);
+    min-width: 0;
+}
+
+.photo-row.three-photos .photo-item {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 0;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.photo-item.ocean img,
+.photo-item.emmy img {
+    object-position: 50% 20%;
+}
+
+.photo-item.forks img {
+    object-position: 50% 30%;
+}
+
+.photo-item.dirt img {
+    object-position: 50% 65%;
+}
+
+.photo-item.wedding img {
+    object-position: 50% 25%;
+}
+
+.photo-item.snow img {
+    object-position: 50% 55%;
+}
+
+.photo-item.cowboy img {
+    object-position: 50% 25%;
+}
+
+.photo-item.gnome img {
+    object-position: 50% 25%;
+}
+
+.photo-item.silvan3 img {
+    object-position: 50% 45%;
+}
+
+.photo-item.valentine img {
+    object-position: 50% 35%;
+}
+
+.bio-content {
+    text-align: center;
+}
+
+.bio-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.bio-photo {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.bio-photo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 750px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}

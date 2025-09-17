@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sialas Tripp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+        <div id="home" class="tab-content active">
+            <div class="photo-grid">
+                <div class="photo-row two-photos">
+                    <div class="photo-item forks">
+                        <img src="images/forks.jpg" alt="Featured Photo 1">
+                    </div>
+                    <div class="photo-item ocean">
+                        <img src="images/ocean.jpg" alt="Featured Photo 2">
+                    </div>
+                </div>
+                
+                <div class="photo-row three-photos">
+                    <div class="photo-item ">
+                        <img src="images/Silvan.jpg" alt="Featured Photo 3">
+                    </div>
+                    <div class="photo-item emmy">
+                        <img src="images/emmy1.jpg" alt="Featured Photo 4">
+                    </div>
+
+                    <div class="photo-item dirt">
+                        <img src="images/dirt.jpg" alt="Featured Photo 5">
+                    </div>
+                </div>
+                
+                <div class="photo-row two-photos">
+                    <div class="photo-item wedding">
+                        <img src="images/wedding.jpg" alt="Featured Photo 6">
+                    </div>
+                    <div class="photo-item snow">
+                        <img src="images/snow.jpg" alt="Featured Photo 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="photos" class="tab-content">
+            <h2 style="text-align: center; color: #000; margin-bottom: 30px;">Photo Gallery</h2>
+            <div class="photo-grid">
+                <div class="photo-row two-photos">
+                    <div class="photo-item valentine">
+                        <img src="images/valentine.jpg" alt="Gallery Photo 1">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/image1.jpg" alt="Gallery Photo 2">
+                    </div>
+                </div>
+                
+                <div class="photo-row three-photos">
+                    <div class="photo-item cowboy">
+                        <img src="images/oldtime.jpg" alt="Gallery Photo 3">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/pumpkin.jpg" alt="Gallery Photo 4">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/engage.jpg" alt="Gallery Photo 5">
+                    </div>
+                </div>
+                
+                <div class="photo-row two-photos">
+                    <div class="photo-item silvan3">
+                        <img src="images/silvan3.jpg" alt="Gallery Photo 6">
+                    </div>
+                    <div class="photo-item gnome">
+                        <img src="images/gnome.jpg" alt="Gallery Photo 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bio" class="tab-content">
+            <div class="bio-content">
+                <p>Welcome to my portfolio! This is a collection of photos of my beautiful family and I.</p>
+                <p>I'm currently a Senior at the University of Idaho and I'm studying Computer Science.</p>
+                <p>On top of that I'm a father of two handsome boys and a husband to a beautiful wife.</p>
+                <p>When I'm not at school or working I'm usually spending time with my family or doing something outdoors.</p>
+                
+                <div class="bio-photo">
+                    <img src="images/Beach.jpg" alt="Bio Photo">
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2 style="text-align: center; color: #ffffff; margin-bottom: 30px;">Get In Touch</h2>
+            
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> sialas.tripp@gmail.com</p>
+                <p><strong>Phone:</strong> (208) 640-3515</p>
+                <p><strong>Location:</strong> Coeur d'Alene, Idaho</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="header-section">
+                <h1>Sialas Tripp</h1>
+                <p class="subtitle">My Portfolio</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('home')">Home</button>
+                <button class="tab-button" onclick="showTab('photos')">Photos</button>
+                <button class="tab-button" onclick="showTab('bio')">Bio</button>
+                <button class="tab-button" onclick="showTab('contact')">Contact</button>
+                <button class="resume-btn" onclick="downloadResume()">Download Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+
+            event.target.classList.add('active');
+        }
+
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'resume/Resume_Sialas_Tripp.pdf';
+            link.download = 'Resume_Sialas_Tripp.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
