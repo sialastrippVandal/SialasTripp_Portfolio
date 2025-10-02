@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cookie Policy - Sialas Tripp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div id="cookies" class="tab-content active">
+                <div class="policy-content">
+                    <p><strong>Last updated:</strong> September 2025</p>
+                    
+                    <h3>1. This is a School Project</h3>
+                    <p>This website was created as part of a school assignment to learn web development and design. It's not a real business website and doesn't actually use cookies or any tracking technologies. This cookie policy is included to show understanding of web development best practices and what a real website would include.</p>
+
+                    <h3>2. No Real Cookies Used</h3>
+                    <p>Since this is an educational demonstration website, no actual cookies are placed on your computer when you visit. The website functions normally without any tracking or data collection. Any interactive features you see are just examples of what a professional website might have, but they don't actually collect or store any information.</p>
+
+                    <h3>3. Educational Purpose Only</h3>
+                    <p>This cookie policy exists purely for educational purposes to demonstrate knowledge of web development practices. In a real website, this section would explain how cookies are used to improve user experience, but since this is just a learning project, no actual cookie management is needed.</p>
+
+                    <h3>4. Contact Information</h3>
+                    <p>If you have any questions about this educational project, you can reach out to the student at:</p>
+                    <p><strong>Email:</strong> sialas.tripp@gmail.com<br>
+                    <strong>Phone:</strong> (208) 640-3515<br>
+                    <strong>Location:</strong> Coeur d'Alene, Idaho</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="header-section">
+                <h1>Sialas Tripp</h1>
+                <p class="subtitle">My Portfolio</p>
+            </div>
+            <div class="tabs">
+                <a href="index.html" class="tab-button">Home</a>
+                <a href="photos.html" class="tab-button">Portfolio</a>
+                <a href="about.html" class="tab-button">About</a>
+                <a href="contact.html" class="tab-button">Contact</a>
+                <a href="signin.html" class="tab-button">Sign In</a>
+                <a href="signup.html" class="tab-button">Sign Up</a>
+                <button class="resume-btn" onclick="downloadResume()">Download Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-menu">
+                <a href="terms.html">Terms and Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </nav>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Sialas Tripp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'resume/Resume_Sialas_Tripp.pdf';
+            link.download = 'Resume_Sialas_Tripp.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
